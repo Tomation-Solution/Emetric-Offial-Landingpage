@@ -5,7 +5,7 @@ import GeneralLayout from '../layout/GeneralLayout/GeneralLayout'
 import HeroSection from '../shared/HeroSection/HeroSection'
 import Info from '../shared/Infos/Infos'
 import ListProductInfo from '../shared/ListProductInfo/ListProductInfo'
-import styles from '../styles/Home.module.css'
+import OtherBenefits from '../shared/OtherBenefis/OtherBenefits'
 
 const Home: NextPage = () => {
   return (
@@ -18,6 +18,8 @@ const Home: NextPage = () => {
       <Info/>
       <br />
       <ListProductInfo/>
+      <br />
+      <OtherBenefits/>
     </GeneralLayout>
   )
 }
