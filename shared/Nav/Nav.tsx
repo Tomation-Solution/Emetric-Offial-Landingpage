@@ -1,5 +1,5 @@
 import Button from '../Button/Button'
-import { NavBtnContainer, NavContainer, NavSecondPart,NavLinksContainer, NavLogoContainer } from './Nav.style'
+import { NavBtnContainer, NavContainer, NavSecondPart,NavLinksContainer, NavLogoContainer, MainNav } from './Nav.style'
 import {  FaBars } from 'react-icons/fa'
 import EmetricLogo  from '../../assets/logo.png'
 import {IoMdCloseCircle} from 'react-icons/io'
@@ -12,34 +12,36 @@ const Nav = ():React.ReactElement=>{
   const handleShowMobileNav=()=> setShowMobileNav(!showMobileNav);
 
   return (
-    <NavContainer>
-      <NavLogoContainer>
-        <img src={EmetricLogo.src} alt="" />
-      </NavLogoContainer>
+    <MainNav>
+      <NavContainer>
+        <NavLogoContainer>
+          <img src={EmetricLogo.src} alt="" />
+        </NavLogoContainer>
 
 
-      <FaBars onClick={handleShowMobileNav}/>
+        <FaBars onClick={handleShowMobileNav}/>
       
 
-      <NavSecondPart showMobileLink={showMobileNav}>
-        <IoMdCloseCircle  onClick={handleShowMobileNav}/>
-        <NavLinksContainer>
-          <li><a href="#">Products</a></li>
-          <li><a href="#">Solutions</a></li>
-          <li><a href="#">Our Parthers</a></li>
-          <li><a href="#">About Us</a></li>
-          <li><a href="#">Blog</a></li>
-        </NavLinksContainer>
+        <NavSecondPart showMobileLink={showMobileNav}>
+          <IoMdCloseCircle  onClick={handleShowMobileNav}/>
+          <NavLinksContainer>
+            <li><a href="#">Products</a></li>
+            <li><a href="#">Solutions</a></li>
+            <li><a href="#">Our Parthers</a></li>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Blog</a></li>
+          </NavLinksContainer>
 
 
-        <NavBtnContainer>
-          <li><a href="">Sign In</a></li>
+          <NavBtnContainer>
+            <li><a href="">Sign In</a></li>
            
-          <Button>Request Demo</Button>
-        </NavBtnContainer>
-      </NavSecondPart>
+            <Button>Request Demo</Button>
+          </NavBtnContainer>
+        </NavSecondPart>
 
-    </NavContainer>
+      </NavContainer>
+    </MainNav>
   )
 }
 

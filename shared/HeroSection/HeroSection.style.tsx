@@ -15,10 +15,38 @@ h1{
 button{
     width: 40%;
 }
+
+@media screen and (min-width: 800px){
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1100px;
+    margin: 0 auto;
+    &:nth-child(1){
+    }
+    
+}
 `
 
 
-export const HeroSectionContentContainer =styled.div``
+export const HeroSectionContentContainer =styled.div`
+        @media screen and (min-width: 800px){
+            width: 56% ;
+            h1{
+                font-size: 3rem;
+            }
+            button{
+        width: 30%;
+    }
+            
+        }
+
+        @media screen and (min-width: 1000px){
+            h1{
+                font-size: 4rem;
+            }
+        }
+`
 
 export const HeroSectionImageContainer =styled.div`
     position: relative;
@@ -27,8 +55,8 @@ export const HeroSectionImageContainer =styled.div`
     gap: 30px;
    */
     height: 45vh;
-    border: 1px solid red;
-    width: 100%;
+    /* border: 1px solid red; */
+    width: 330px;
     margin:0 auto;
     display: flex;
     align-items: center;
@@ -74,9 +102,25 @@ export const HeroSectionImageContainer =styled.div`
         right: 0;
         bottom: 0px;
     }
-    div.img_4{
+    .img_4{
         position: absolute;
        left: 30px;
         bottom:30px;
+    }
+
+
+
+    @media screen and (min-width: 800px){
+            width: 40% ;
+            margin: unset;
+    }
+    @media screen and (min-width: 1000px){
+            width: 40% ;
+            margin: unset;
+            .hero_main_img{
+                width: 250px;
+            }
+
+     
     }
 `

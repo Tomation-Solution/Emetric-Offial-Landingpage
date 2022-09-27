@@ -1,7 +1,9 @@
 import styled from 'styled-components';
 
 
-
+export const MainNav =styled.nav`
+    box-shadow: 0px 4px 4px rgba(20, 166, 229, 0.048);
+`
 export const NavContainer=styled.div`
 /* border: 1px solid red; */
 padding: .8rem 1rem;
@@ -9,8 +11,8 @@ display: flex;
 align-items: center;
 justify-content: space-between;
 position: relative;
-box-shadow: 0px 4px 4px rgba(20, 166, 229, 0.048);
-
+max-width: 1200px;
+margin: 0 auto;
 svg{
     font-weight: 100;
     color: ${({theme})=>theme.text.normalText};
