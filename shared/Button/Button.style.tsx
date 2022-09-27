@@ -5,6 +5,9 @@ import { createExternalStyle } from '../../utils/extraFunction';
 import { motion } from 'framer-motion';
 export const ButtonStyle = styled(motion.button)<ButtonProp>`
   
+  box-shadow: 0px 4px 4px rgba(20, 167, 229, 0.3);
+border-radius: 10px;
+
  border: transparent;
  padding: .7rem 1rem;
 border-radius: 5px;
