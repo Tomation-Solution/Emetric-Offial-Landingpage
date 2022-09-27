@@ -115,13 +115,13 @@ export const NavBtnContainer=styled.div`
     }
 
     @media screen and (min-width: 1200px){
-        width: 300px;
+        width: 250px;
         li{
             padding: 0 .2rem;
             width: 30%;
         }
         button{
-            width: 50%;
+            width: 60%;
         }
     }
 `

@@ -13,6 +13,8 @@ const  GeneralLayout = ({children}:Prop):React.ReactElement=>{
   return (
     <div>
       <Nav/>
+
+      {children}
     </div>
   )
 }
