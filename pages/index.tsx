@@ -6,7 +6,7 @@ import HeroSection from '../shared/HeroSection/HeroSection'
 import Info from '../shared/Infos/Infos'
 import ListProductInfo from '../shared/ListProductInfo/ListProductInfo'
 import OtherBenefits from '../shared/OtherBenefis/OtherBenefits'
-
+import OurPatherIntro from '../shared/ourPatherIntro/ourPatherIntro'
 const Home: NextPage = () => {
   return (
     <GeneralLayout>
@@ -20,6 +20,8 @@ const Home: NextPage = () => {
       <ListProductInfo/>
       <br />
       <OtherBenefits/>
+      <br />
+      <OurPatherIntro/>
     </GeneralLayout>
   )
 }
