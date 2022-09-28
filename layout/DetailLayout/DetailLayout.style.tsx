@@ -6,7 +6,7 @@ export const DetailLayoutContainerImg= styled.div<{image:string}>`
 /* display: none; */
 display: block;
 height: 100vh;
-width: 100vw;
+/* width: 100vw; */
 display: flex;
 align-items: center;
 justify-content: center;

@@ -2,7 +2,7 @@ import DetailLayout from '../layout/DetailLayout/DetailLayout'
 import { Team, TeamContainer, TeamImgContainer, TeamSocials } from '../styles/our_team.style'
 import OzeImage from '../assets/oze.jpeg'
 import { BsLinkedin} from 'react-icons/bs'
-
+import teamImg from '../assets/teamImg.jpg'
 
 
 const OurTeam = ():React.ReactElement=>{
@@ -11,6 +11,7 @@ const OurTeam = ():React.ReactElement=>{
 
   return (
     <DetailLayout
+      image={teamImg.src}
       heading='Our Team'
       body='We have a team of experienced HR consultants with substansive years of experience'
     >
