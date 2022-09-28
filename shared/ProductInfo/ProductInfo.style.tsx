@@ -73,6 +73,10 @@ export const ProductInfoContentContainer = styled.div`
         color: ${({theme})=>theme.text.thickText};
         padding: 1rem 0;
     }
+    p{
+        color: ${({theme})=>theme.text.normalText};
+
+    }
 
     button{
         width: 40%;

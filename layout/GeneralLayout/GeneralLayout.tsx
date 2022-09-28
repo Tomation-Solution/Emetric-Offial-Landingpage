@@ -1,3 +1,4 @@
+import Footer from '../../shared/Footer/Footer'
 import Nav from '../../shared/Nav/Nav'
 
 
@@ -15,6 +16,8 @@ const  GeneralLayout = ({children}:Prop):React.ReactElement=>{
       <Nav/>
 
       {children}
+
+      <Footer/>
     </div>
   )
 }

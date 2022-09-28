@@ -24,7 +24,6 @@ const Home: NextPage = () => {
       <br />
       <OurPatherIntro/>
       <br />
-      <Footer/>
     </GeneralLayout>
   )
 }
