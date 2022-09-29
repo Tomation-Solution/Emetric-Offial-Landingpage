@@ -1,12 +1,11 @@
-import hr_image from '../../assets/hr_image.jpeg'
-import perfomance from '../../assets/perfomance.jpeg'
-import apprazal_data from '../../assets/apprazal_data.jpeg'
-import strategyImg from '../../assets/strategyImg.jpeg'
-import taskImage from '../../assets/taskImage.jpeg'
-import StrategyManagement from '../../assets/StrategyManagement.png'
-import timeSheetImag from '../../assets/timeSheetImag.png'
-import leaveManagentImg from '../../assets/leaveManagentImg.png'
-
+import hr_image from './assets/hr_image.jpeg'
+import perfomance from './assets/perfomance.jpeg'
+import apprazal_data from './assets/apprazal_data.jpeg'
+import strategyImg from './assets/strategyImg.jpeg'
+import taskImage from './assets/taskImage.jpeg'
+import StrategyManagement from './assets/StrategyManagement.png'
+import timeSheetImag from './assets/timeSheetImag.png'
+import leaveManagentImg from './assets/leaveManagentImg.png'
 
 
 export const solutiondata= [
