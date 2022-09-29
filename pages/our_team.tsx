@@ -17,9 +17,9 @@ const OurTeam = ():React.ReactElement=>{
     >
 
       <TeamContainer>
-        <Team>
+        {/* <Team>
           <TeamImgContainer>
-            {/* <img src={OzeImage.src} alt="" /> */}
+            <img src={OzeImage.src} alt="" />
           </TeamImgContainer>
 
           <h2>Mr. Ozed Osawe</h2>
@@ -28,7 +28,7 @@ const OurTeam = ():React.ReactElement=>{
           <TeamSocials>
             <BsLinkedin/>
           </TeamSocials>
-        </Team>
+        </Team> */}
         <br />
         <br />
         <Team>
