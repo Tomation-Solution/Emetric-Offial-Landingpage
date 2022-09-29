@@ -3,7 +3,7 @@ import { NavBtnContainer, NavContainer, NavSecondPart,NavLinksContainer, NavLogo
 import {  FaBars } from 'react-icons/fa'
 import EmetricLogo  from '../../assets/logo.png'
 import {IoMdCloseCircle} from 'react-icons/io'
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import NavDropDown from '../NavDropDown/NavDropDown'
 import Link from 'next/link';
 import { useRouter } from 'next/router';
@@ -51,35 +51,35 @@ const Solutions = [
   },
   {
     title:'Key Performance Indicators Analytics',
-    url:'',
+    url:'/solutions/3',
     content:`
     Extraction of result based KPIs and the other parameters especially for the none sales related job functions (backend) could become an herculean task if the ri...more
     `
   },
   {
     title:'Corporate Strategy Development',
-    url:'',
+    url:'/solutions/2',
     content:`
     Designed to ensure that organizations produce better plans for how they might effectively respond to the new and emerging future.,,,more
     `
   },
   {
     title:'Process Documentation',
-    url:'',
+    url:'/solutions/4',
     content:`
     identify the current state of a process to know how you can improve it..more
     `,
   },
   {
     title:'Performance Management',
-    url:'',
+    url:'/solutions/5',
     content:`
     while sustaining performance, productivity, and the motivation of employees. In recent years, it has become obvious that traditional performance management is...more
     `,
   },
   {
     title:'Performance Management Software',
-    url:'',
+    url:'/solutions/6',
     content:`
     E-Metric Suite Software is designed to provide for the need of organizations globally to monitor and manage performance across all tiers as daily operational a...more
     `,
@@ -89,49 +89,49 @@ const Solutions = [
 const products = [
   {
     title:'HR Administration',
-    url:'',
+    url:'/products/4',
     content:`
     Be on top of your game by relying on our automated HR tasks management system designed to suit your operational needs.
     `
   },
   {
     title:'Performance Management',
-    url:'',
+    url:'/products/3',
     content:`
     Make a switch from running through several spreadsheets in a bid to prepare your payroll.
     `
   },
   {
     title:'Strategy Implimentation',
-    url:'',
+    url:'/products/1',
     content:`
     Manage task allocation, submission and rating hitch freely.
     `
   },
   {
     title:'Appraisal Data Generation',
-    url:'',
+    url:'/products/2',
     content:`
     Enjoy effortless management of leave planning and administration with a few clicks.
     `
   },
   {
     title:'Task Managment',
-    url:'',
+    url:'/products/7',
     content:`
     View employee calendars easily for time analysis and utilization.
     `
   },
   {
     title:'Payroll Administration',
-    url:'',
+    url:'/products/6',
     content:`
     Enjoy effortless management of leave planning and administration with a few clicks.
     `
   },
   {
     title:'Time Sheet',
-    url:'',
+    url:'/products/5',
     content:`
     View employee calendars easily for time analysis and utilization.
     `
@@ -151,6 +151,12 @@ const Nav = ():React.ReactElement=>{
         setDropdown(id)
       }
     }
+  }
+
+  if(router.events){
+    router.events.on('routeChangeStart',e=>{
+      setDropdown('')
+    })
   }
   return (
     <MainNav>
