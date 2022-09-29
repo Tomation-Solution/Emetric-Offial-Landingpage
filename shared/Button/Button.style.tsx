@@ -23,7 +23,7 @@ ${(prop)=>{
     if(prop.styleType==='pry'){
       style = `background-color:${prop.theme.main_color};color: whitesmoke;font-weight: 600;padding: 1rem 1rem;`
     }else{
-      style = 'background-color:#f6f6f6;color: gray;font-weight: 600;border:1px solid  #e5e7eb;'
+      style = `background-color:white;color:${prop.theme.main_color};font-weight: 600;border:1px solid  ${prop.theme.main_color};`
     }
     return style
   }};

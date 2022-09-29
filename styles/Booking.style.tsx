@@ -17,7 +17,8 @@ export const LoginNav = styled.div`
 `
 
 
-export const LoginContainer= styled.div`
+export const LoginContainer= styled.div<{viewHieght?:number}>`
+  /*  */
 
 
 @media screen and (min-width: 900px){
@@ -26,6 +27,11 @@ export const LoginContainer= styled.div`
   align-items: center;
   height: 114vh;
   /* border: 1px solid red; */
+  ${props=>{
+    if(props.viewHieght){
+      return `height: ${props.viewHieght}vh;`
+    }
+  }}
 
   &>div:nth-child(1){
     width: 45%;
@@ -59,7 +65,18 @@ display: none;
 }
 `
 
-
+export const FlexInput = styled.div`
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+/* 
+  &> div:nth-child(1){
+    width: 50% !important;
+  }
+  &> div:nth-child(2){
+    width: 50% !important;
+  } */
+`
 export const LoginContentContainer= styled.div`
   padding: 1.7rem;
   max-width: 500px;
