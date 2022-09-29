@@ -19,7 +19,7 @@ const OurTeam = ():React.ReactElement=>{
       <TeamContainer>
         <Team>
           <TeamImgContainer>
-            <img src={OzeImage.src} alt="" />
+            {/* <img src={OzeImage.src} alt="" /> */}
           </TeamImgContainer>
 
           <h2>Mr. Ozed Osawe</h2>
@@ -33,7 +33,7 @@ const OurTeam = ():React.ReactElement=>{
         <br />
         <Team>
           <TeamImgContainer>
-            <img src={OzeImage.src} alt="" />
+            {/* <img src={OzeImage.src} alt="" /> */}
           </TeamImgContainer>
 
           <h2>Debo Adebayo</h2>
@@ -49,7 +49,7 @@ const OurTeam = ():React.ReactElement=>{
         <br />
         <Team>
           <TeamImgContainer>
-            <img src={OzeImage.src} alt="" />
+            {/* <img src={OzeImage.src} alt="" /> */}
           </TeamImgContainer>
 
           <h2>Robert P. Ebers</h2>
