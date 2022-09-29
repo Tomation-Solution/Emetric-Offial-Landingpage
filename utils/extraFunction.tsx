@@ -18,3 +18,14 @@ export const createExternalStyle = (props:StyleTpe)=>{
   } 
   return styles
 }
+
+
+export const demo_link ='https://calendly.com/emetricsuitesolutions/demo-for-roselyn'
+
+
+export const handleDemo =()=>{
+  if(typeof  window  != 'undefined'){
+    //
+    window.location.href=demo_link
+  }
+}

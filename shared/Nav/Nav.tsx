@@ -9,6 +9,7 @@ import Link from 'next/link';
 import { useRouter } from 'next/router';
 import down from '../../assets/down.png'
 import up from '../../assets/up.png'
+import { handleDemo } from '../../utils/extraFunction'
 const about = [
   {
     title:'About Us',
@@ -195,7 +196,7 @@ const Nav = ():React.ReactElement=>{
             <li><a 
               href="/parthers"
               className={router.pathname == '/parthers' ? 'active' : ''} 
-            >Our Parthers</a></li>
+            >Our Partners </a></li>
             <li>
               <a href="#"
                 id='about_us'
@@ -212,9 +213,9 @@ const Nav = ():React.ReactElement=>{
 
 
           <NavBtnContainer>
-            <li><a href="">Sign In</a></li>
+            <li><a href="https://www.emetricsuiteapp.tech/">Sign In</a></li>
            
-            <Button>Request Demo</Button>
+            <Button onClick={handleDemo}>Request Demo</Button>
           </NavBtnContainer>
         </NavSecondPart>
 

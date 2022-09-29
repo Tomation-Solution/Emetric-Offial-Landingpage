@@ -1,6 +1,7 @@
 import Button from '../Button/Button'
 import { ProductInfoContentContainer, ProductInfoImageContainer, ProductInfoMainContainer ,ProductInfoCover} from './ProductInfo.style'
 import rounded_transparent from '../../assets/rounded-transparent.png'
+import { handleDemo } from '../../utils/extraFunction';
 
 
 type Prop ={
@@ -24,7 +25,7 @@ const ProductInfo = ({heading,body,image,variant='var1'}:Prop):React.ReactElemen
             {body}
           </p>
           <br />
-          <Button>
+          <Button onClick={handleDemo}>
           Get Started
           </Button>
         </ProductInfoContentContainer>

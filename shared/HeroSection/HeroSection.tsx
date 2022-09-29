@@ -5,9 +5,12 @@ import hourse_svg from '../../assets/hourse.png'
 import time_svg from '../../assets/time_svg.png'
 import note_svg from '../../assets/note_svg.png'
 import note_with_settings from '../../assets/note_with_settings.png'
+import { useRouter } from 'next/router'
+import { demo_link, handleDemo } from '../../utils/extraFunction'
 const HeroSection = ():React.ReactElement=>{
 
 
+  const route = useRouter()
 
   return (
     <HeroSectionContainer>
@@ -19,7 +22,7 @@ const HeroSection = ():React.ReactElement=>{
       without leaving anything undone in an effortless manner.
         </p>
         <br />
-        <Button>Request Demo</Button>
+        <Button onClick={handleDemo}>Request Demo</Button>
       </HeroSectionContentContainer>
       <br />
       <HeroSectionImageContainer>

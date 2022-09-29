@@ -25,7 +25,7 @@ width: 100%;
     @media screen and (min-width: 800px){
         display: flex;
         justify-content: space-between;
-        align-items: center;
+        /* align-items: center; */
         max-width: 1100px;
         margin: 0 auto;
     }

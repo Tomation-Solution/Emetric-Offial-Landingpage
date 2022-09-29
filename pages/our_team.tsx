@@ -53,7 +53,7 @@ const OurTeam = ():React.ReactElement=>{
           </TeamImgContainer>
 
           <h2>Robert P. Ebers</h2>
-          <p>Chief Executive Officer</p>
+          <p>Chief Operating Officer</p>
           <TeamSocials>
             <BsLinkedin/>
           </TeamSocials>
