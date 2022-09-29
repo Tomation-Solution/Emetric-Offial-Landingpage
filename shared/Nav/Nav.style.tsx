@@ -3,6 +3,8 @@ import styled from 'styled-components';
 
 export const MainNav =styled.nav`
     box-shadow: 0px 4px 4px rgba(20, 166, 229, 0.048);
+    position: relative;
+    z-index: 10;
 `
 export const NavContainer=styled.div`
 /* border: 1px solid red; */
@@ -75,10 +77,22 @@ svg{
 export const NavLogoContainer=styled.div``
 
 
+
 export const NavLinksContainer=styled.ul`
-    color: ${({theme})=>theme.text.lightText};
+    
+    
     li{
         padding: .8rem 0;
+        position: relative;
+    }
+    a{
+        color: ${({theme})=>theme.text.lightText};
+        &:hover{
+            color: ${({theme})=>theme.main_color};
+        }
+        &.active{
+            color: ${({theme})=>theme.main_color} !important;
+        }
     }
 
     @media screen and (min-width: 800px){

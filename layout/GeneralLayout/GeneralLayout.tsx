@@ -13,9 +13,11 @@ const  GeneralLayout = ({children}:Prop):React.ReactElement=>{
 
   return (
     <div>
-      <Nav/>
 
-      {children}
+      <Nav/>
+      <div>
+        {children}
+      </div>
 
       <Footer/>
     </div>

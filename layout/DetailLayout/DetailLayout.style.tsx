@@ -10,7 +10,9 @@ height: 100vh;
 display: flex;
 align-items: center;
 justify-content: center;
-
+h1,p{
+  color: white;
+}
 background-image:
     linear-gradient(to bottom, #14a6e549,black),
     url(${(props)=>props.image});
