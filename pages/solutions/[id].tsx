@@ -2,7 +2,7 @@ import { NextPage } from 'next';
 import GeneralLayout from '../../layout/GeneralLayout/GeneralLayout';
 import ProductInfo from '../../shared/ProductInfo/ProductInfo';
 import hr_image from '../../assets/hr_image.jpeg'
-import {solutiondata} from './solutiondata';
+import {solutiondata} from '../../solutiondata';
 import { useRouter } from 'next/router';
 
 // type DataType = 
