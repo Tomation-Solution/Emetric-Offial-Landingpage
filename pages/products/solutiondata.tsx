@@ -9,7 +9,7 @@ import leaveManagentImg from '../../assets/leaveManagentImg.png'
 
 
 
-export default [
+export const solutiondata= [
   {
     heading:'Strategy Implimentation Management',
     body:`
