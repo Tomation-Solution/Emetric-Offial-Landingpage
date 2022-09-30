@@ -4,10 +4,15 @@ import styled from 'styled-components';
 // background-color: rgba(20, 167, 229, 0.1);
 export const SubscribeCover = styled.div`
 
-padding: 2rem;
+padding: 3rem 2rem;
 text-align: center;
 background-color: rgba(20, 167, 229, 0.1);
+max-width: 1000px;
 
+@media screen and (min-width: 800px){
+    border-radius: 10px;
+    margin: 0 auto;
+}
 
 `
 export const SubscribeToBlogContainer = styled.div`
