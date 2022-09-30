@@ -159,6 +159,10 @@ const Nav = ():React.ReactElement=>{
       setDropdown('')
     })
   }
+
+  const handleRoute = (route:string):void=>{
+    router.push(route)
+  }
   return (
     <MainNav>
       <NavContainer>
@@ -208,7 +212,13 @@ const Nav = ():React.ReactElement=>{
               </a>
               <NavDropDown submenus={about} dropdown={dropdown=='about_us'} />
             </li>
-            <li><a href="#">Blog</a></li>
+            <li><a 
+              className={router.pathname == '/blog' ? 'active' : ''} 
+              onClick={e=>{
+                e.preventDefault()
+                handleRoute('/blog')
+              }}
+            >Blog</a></li>
           </NavLinksContainer>
 
 
