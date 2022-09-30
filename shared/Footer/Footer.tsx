@@ -1,6 +1,7 @@
 import { NavLogoContainer } from '../Nav/Nav.style'
 import { FooterContainer, FooterCover, FooterSectionA, FooterSectionB } from './Footer.style'
 import EmetricLogo  from '../../assets/logo.png'
+import { useRouter } from 'next/router'
 
 
 
@@ -8,7 +9,10 @@ import EmetricLogo  from '../../assets/logo.png'
 
 
 const Footer = ():React.ReactElement=>{
-
+  const route = useRouter()
+  const handleRoute = (link:string):void=>{
+    route.push(link)
+  }
   return (
     <FooterCover>
       <FooterContainer>
@@ -28,12 +32,18 @@ const Footer = ():React.ReactElement=>{
           </div>
 
           <div className='footer_feature_container'>
-            <p>Products</p>
-            <p>Performance Management</p>
-            <p>Time Sheet</p>
-            <p>Personnel Information Management</p>
-            <p>Leave Administration</p>
-            <p>Payroll Management</p>
+            <p><strong>
+            Products
+            </strong></p>
+
+            <p onClick={e=>handleRoute('/products/6')}>Performance Management</p>
+            
+            <p onClick={e=>handleRoute('/products/5')}>Time Sheet</p>
+            
+            
+            <p onClick={e=>handleRoute('/products/8')}>Leave Administration</p>
+            
+            <p onClick={e=>handleRoute('/products/6')}>Payroll Management</p>
           </div>
 
           <div className='footer_pages_link'>

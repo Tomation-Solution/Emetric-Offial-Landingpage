@@ -74,7 +74,9 @@ svg{
 }
 
 `
-export const NavLogoContainer=styled.div``
+export const NavLogoContainer=styled.div`
+cursor: pointer;
+`
 
 
 

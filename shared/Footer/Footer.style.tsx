@@ -54,6 +54,11 @@ p{
         /* align-items: flex-start; */
         width: 40%;
     }
+
+    .footer_feature_container p{
+        padding: .5rem 0;
+        
+    }
 }
 `
 export const FooterSectionB= styled.div`

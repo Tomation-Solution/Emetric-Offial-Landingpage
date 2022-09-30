@@ -162,7 +162,7 @@ const Nav = ():React.ReactElement=>{
   return (
     <MainNav>
       <NavContainer>
-        <NavLogoContainer>
+        <NavLogoContainer onClick={()=> router.push('/')}>
           <img src={EmetricLogo.src} alt="" />
         </NavLogoContainer>
 

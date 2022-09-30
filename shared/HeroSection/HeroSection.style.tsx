@@ -61,7 +61,10 @@ export const HeroSectionImageContainer =styled.div`
     display: flex;
     align-items: center;
     justify-content: center;
+    img{
+    transition: all .4s ease-in-out !important;
 
+    }
     .hero_main_img{
         width: 150px;
     }

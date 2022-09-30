@@ -1,17 +1,32 @@
 import Button from '../Button/Button'
 import { HeroSectionContainer, HeroSectionContentContainer, HeroSectionImageContainer } from './HeroSection.style'
 import hero_image1 from '../../assets/hero_image1.png'
+import hero_image2 from '../../assets/Ellipse 28.png'
 import hourse_svg from '../../assets/hourse.png'
 import time_svg from '../../assets/time_svg.png'
 import note_svg from '../../assets/note_svg.png'
 import note_with_settings from '../../assets/note_with_settings.png'
 import { useRouter } from 'next/router'
 import { demo_link, handleDemo } from '../../utils/extraFunction'
+import {useEffect, useState} from 'react'
+/* eslint-disable */
+// @ts-ignore
+import Zoom  from 'react-reveal/Zoom';
 const HeroSection = ():React.ReactElement=>{
-
-
+  const [count ,setCount]= useState(0 )
   const route = useRouter()
+  useEffect(()=>{
+    const interval =  setInterval(()=>{
+    
+      setCount(value=>value+1)
+      console.log(count)
+    },7000)
 
+    return () => clearInterval(interval);
+  },[])
+  console.log(
+    count%2==0
+  )
   return (
     <HeroSectionContainer>
       <HeroSectionContentContainer>
@@ -26,7 +41,14 @@ const HeroSection = ():React.ReactElement=>{
       </HeroSectionContentContainer>
       <br />
       <HeroSectionImageContainer>
-        <img className='hero_main_img' src={hero_image1.src} alt="" />
+      
+
+<Zoom   when={count%2==0?true:false}>
+<img className='hero_main_img' src={hero_image1.src} alt="" style={{'display':count%2==0?'block':'none'}} />
+</Zoom >
+  <Zoom  when={count%2!=0?true:false} >
+  <img className='hero_main_img' src={hero_image2.src} alt="" style={{'display':count%2!=0?'block':'none'}}/>
+</Zoom >
         <div className='img_1 container-img' >
           <img  src={time_svg.src} alt="" />
         </div>
