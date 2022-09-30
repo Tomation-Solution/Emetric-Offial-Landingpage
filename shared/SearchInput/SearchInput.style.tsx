@@ -13,7 +13,7 @@ export const BlogSearchContainer = styled.div`
  input{
     border: transparent;
     width: 70%;
-    padding: .4rem;
+    padding: .7rem;
  }
  button{
     border-radius: 0;

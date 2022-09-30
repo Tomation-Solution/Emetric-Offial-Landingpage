@@ -2,6 +2,7 @@ import React from 'react'
 import BlogNav from '../../shared/BlogNav/BlogNav'
 import Footer from '../../shared/Footer/Footer'
 import Nav from '../../shared/Nav/Nav'
+import SubscribeToBlogPane from '../../shared/SubscribeToBlogPane/SubscribeToBlogPane'
 
 
 
@@ -17,7 +18,9 @@ const BlogLayout = ({ children }:Prop):React.ReactElement=>{
       <BlogNav/>
       {children} 
 
-
+      <br />
+      <SubscribeToBlogPane/>
+      <br />
       <Footer/>
     </div>
   )
