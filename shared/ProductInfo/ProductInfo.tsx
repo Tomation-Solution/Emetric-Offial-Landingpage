@@ -2,7 +2,9 @@ import Button from '../Button/Button'
 import { ProductInfoContentContainer, ProductInfoImageContainer, ProductInfoMainContainer ,ProductInfoCover} from './ProductInfo.style'
 import rounded_transparent from '../../assets/rounded-transparent.png'
 import { handleDemo } from '../../utils/extraFunction';
-
+// eslint-disable-next-line @typescript-eslint/ban-ts-comment
+// @ts-ignore
+import Bounce from 'react-reveal/Bounce';
 
 type Prop ={
   heading:string;
@@ -12,7 +14,7 @@ type Prop ={
 }
 const ProductInfo = ({heading,body,image,variant='var1'}:Prop):React.ReactElement=>{
 
-  return(
+  const template = (
     <ProductInfoCover variant={variant}>
       <img className='rounded_transparent_svg' src={rounded_transparent.src} alt="" />
       <ProductInfoMainContainer variant={variant}>
@@ -31,6 +33,24 @@ const ProductInfo = ({heading,body,image,variant='var1'}:Prop):React.ReactElemen
         </ProductInfoContentContainer>
       </ProductInfoMainContainer>  
     </ProductInfoCover>
+  )
+  return(
+    <>
+      {
+        variant=='var1'?
+          <Bounce right>
+            {
+              template
+            }
+          </Bounce>:
+          <Bounce left>
+            {
+              template
+            }
+          </Bounce>
+      }
+    </>
+    
   )
 }
 

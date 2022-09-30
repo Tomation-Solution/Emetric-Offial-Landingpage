@@ -27,7 +27,7 @@ const ContactPage:NextPage = ()=>{
               <br />
               <p>We{'\''}re available from 9 AM to 5 PM (UTC +1). Call us; we{'\''}re happy to help you meet your HR automation needs.</p>
               <br />
-              <Button style={{'width':'40%'}}>+2340000000000</Button>
+              <Button style={{'width':'40%'}}>+1 (504) 499-5921</Button>
             </div>
 
           </LoginNav>
