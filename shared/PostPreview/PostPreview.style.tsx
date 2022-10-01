@@ -90,6 +90,9 @@ ${(props)=>{
     img{
         display: block;
         width:100%;
+        height: 320px;
+        border-radius:20px;
+        object-fit:fill;
     }
     @media screen  and (min-width: 800px){
         ${(props)=>{

@@ -1,26 +1,29 @@
 import Button from '../Button/Button'
 import { PostPreviewContainer, PostPreviewContentContainer, PostPreviewImageContainer } from './PostPreview.style'
 import Image from '../../assets/blog1.png' 
+import { BlogType } from '../../pages/blog'
+import { useRouter } from 'next/router'
 
 type Prop = {
     variant?:'var1'|'var2'
+    blog:BlogType
 }
 
-const PostPreview = ({ variant ='var1'}:Prop):React.ReactElement=>{
+const PostPreview = ({ variant ='var1',blog}:Prop):React.ReactElement=>{
 
-
+  const route = useRouter()
 
   return (
     <PostPreviewContainer   variant={variant}>
       <PostPreviewImageContainer variant={variant}>
-        <img src={Image.src} alt="" />
+        <img src={blog.main_image} alt="" />
       </PostPreviewImageContainer>
       <br />
       <PostPreviewContentContainer>
-        <h2>MANAGING SUBJECTIVITY IN EMPLOYEE RATING</h2>
-        <p>The existence of subjectivity in rating is a common knowledge. This is one major set-back encountered during appraisals where managers bring in some element of prejudice or bias when rating their subordinates.</p>
-        <Button styleType='sec'>Read more</Button>
-        <p><strong>HR Management/10 Mins Read</strong></p>
+        <h2>{blog.title}</h2>
+        <p>{blog.get_paragraph_intro}...</p>
+        <Button styleType='sec' onClick={(e)=>route.push('/blog/'+blog.id)}>Read more</Button>
+        {/* <p><strong>HR Management/10 Mins Read</strong></p> */}
       </PostPreviewContentContainer>
     </PostPreviewContainer>
   )
