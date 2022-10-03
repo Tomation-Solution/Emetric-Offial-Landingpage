@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 
 
-export const BlogSearchContainer = styled.div`
+export const BlogSearchContainer = styled.form`
  border: 1px solid #4b55636f;
   border-radius: 5px;
   background-color: white;

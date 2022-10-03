@@ -5,7 +5,7 @@ import styled from 'styled-components';
 export const DetailLayoutContainerImg= styled.div<{image:string}>`
 /* display: none; */
 display: block;
-height: 100vh;
+height: 70vh;
 /* width: 100vw; */
 display: flex;
 align-items: center;

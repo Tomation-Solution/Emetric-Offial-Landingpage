@@ -62,7 +62,7 @@ a{
     color: #fff;
     font-size: 20px;
     /* width: 34vw; */
-    background-color: #38a169;
+    background-color:#14A7E5;
     min-width: 300px;
     padding: 1rem 1rem;
 }

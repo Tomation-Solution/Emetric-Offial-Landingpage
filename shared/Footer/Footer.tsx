@@ -47,16 +47,13 @@ const Footer = ():React.ReactElement=>{
           </div>
 
           <div className='footer_pages_link'>
-            <p>Products</p>
-            <p>Solutions</p>
-            <p>Pricing</p>
-            <p>Our Partners</p>
-            <p>Blog</p>
+            <p onClick={(e)=> handleRoute('/parthers')}>Our Partners</p>
+            <p onClick={(e)=> handleRoute('/blog')}>Blog</p>
           </div>
         </FooterSectionA>
         <br />
         <FooterSectionB>
-        Copyright © 2022 E-metric Inc.
+        Copyright © 2022 Emetric LLc.
         </FooterSectionB>
       </FooterContainer>
     </FooterCover>

@@ -219,11 +219,19 @@ const Nav = ():React.ReactElement=>{
                 handleRoute('/blog')
               }}
             >Blog</a></li>
+
+            <li><a 
+              className={router.pathname == '/contact_page' ? 'active' : ''} 
+              onClick={e=>{
+                e.preventDefault()
+                handleRoute('/contact_page')
+              }}
+            >contact</a></li>
           </NavLinksContainer>
 
 
           <NavBtnContainer>
-            <li><a href="https://www.emetricsuiteapp.tech/">Sign In</a></li>
+            <li><a href="https://www.emetricsuiteapp.tech/" target={'_blank'} rel="noreferrer" color='#14A7E5'>Sign In</a></li>
            
             <Button onClick={handleDemo}>Request Demo</Button>
           </NavBtnContainer>

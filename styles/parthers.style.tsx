@@ -82,4 +82,7 @@ button{
     margin: 0 auto;
 }
 
+span{
+    color:${props=>props.theme.main_color};
+}
 `

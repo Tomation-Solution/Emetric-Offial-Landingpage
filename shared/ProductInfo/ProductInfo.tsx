@@ -11,11 +11,12 @@ type Prop ={
   body:string;
   image:string
   variant?:'var1' | 'var2'
+  removeColor?:boolean
 }
-const ProductInfo = ({heading,body,image,variant='var1'}:Prop):React.ReactElement=>{
+const ProductInfo = ({heading,body,image,variant='var1',removeColor=false}:Prop):React.ReactElement=>{
 
   const template = (
-    <ProductInfoCover variant={variant}>
+    <ProductInfoCover variant={variant } removeColor={removeColor}>
       <img className='rounded_transparent_svg' src={rounded_transparent.src} alt="" />
       <ProductInfoMainContainer variant={variant}>
         <ProductInfoImageContainer>

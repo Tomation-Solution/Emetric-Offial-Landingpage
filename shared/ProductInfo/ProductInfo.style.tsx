@@ -1,7 +1,9 @@
 import styled from 'styled-components';
 
 
-type Prop = {variant:'var1' | 'var2'}
+type Prop = {variant:'var1' | 'var2'
+removeColor?:boolean
+}
 export const ProductInfoMainContainer = styled.div<Prop>`
 .ProductInfoMainContainer{
     display: none;
@@ -47,7 +49,11 @@ export const ProductInfoCover =styled.div<Prop>`
   }}
 
 
-
+  ${props=>{
+    if(props.removeColor){
+      return 'background-color: white;'
+    }
+  }}
     
 `
 export const ProductInfoImageContainer = styled.div`

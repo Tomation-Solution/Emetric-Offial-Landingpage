@@ -9,7 +9,7 @@ type Prop ={
   isTextArea?:boolean;
   register?:any;
   errorMessage?:string;
-  type?:'date'|'text'|'email'
+  type?:'date'|'text'|'email'|'number'
 }
 const InputWithLabel = ({ errorMessage,label,placeholder='',type='text',isTextArea=false,register}:Prop):React.ReactElement=>{
 

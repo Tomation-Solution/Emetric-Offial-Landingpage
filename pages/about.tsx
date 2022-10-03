@@ -41,6 +41,7 @@ const About:NextPage =()=>{
         `}
           image={hr_image.src}
           variant='var2'
+          removeColor={true}
         />
       </div>
     </DetailLayout>

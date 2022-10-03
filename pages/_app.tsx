@@ -3,6 +3,8 @@ import type { AppProps } from 'next/app'
 import { ThemeProvider } from 'styled-components';
 import {lightTheme,darkTheme,GlobalStyles } from '../utils/ThemeConfig'
 import { useState } from 'react';
+import { ToastContainer } from 'react-toastify';
+import NextNProgress from 'nextjs-progressbar';
 
 
 function MyApp({ Component, pageProps }: AppProps) {
@@ -14,10 +16,11 @@ function MyApp({ Component, pageProps }: AppProps) {
   return(
 
     <ThemeProvider theme={theme == 'light' ? lightTheme: darkTheme}>
-      {/* <ToastContainer/> */}
+      <ToastContainer/>
 
 
       <GlobalStyles/>
+      <NextNProgress />
       {/* <button onClick={toggleTheme}>Switch Theme</button> */}
       <Component {...pageProps} />
 
