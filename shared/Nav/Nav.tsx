@@ -188,7 +188,6 @@ const Nav = ():React.ReactElement=>{
             <NavDropDown submenus={products} dropdown={dropdown=='product'} />
 
             </li>
-
             <li><a href="#"
               id='solutions'
               aria-expanded={dropdown ? 'true' : 'false'}

@@ -19,6 +19,10 @@ const PostPreview = ({ variant ='var1',blog}:Prop):React.ReactElement=>{
         <img src={blog.main_image} alt="" />
       </PostPreviewImageContainer>
       <br />
+      <br />
+      <br />
+      <br />
+      <br />
       <PostPreviewContentContainer>
         <h2>{blog.title}</h2>
         <p>{blog.get_paragraph_intro}...</p>
