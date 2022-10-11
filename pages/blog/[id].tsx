@@ -51,7 +51,7 @@ const BlogDetail = ():React.ReactElement=>{
               </BlogDetailMainImageContainer>   
 
               <BlogHeaderContainer>
-                <h2>{blog.author}</h2>
+                <h2>{blog.title}</h2>
                 <div>
                   <p>{new Date(blog.date_created).toDateString()}</p>
                   <p><strong>writer: </strong><span>{blog.author} </span></p>
