@@ -15,7 +15,7 @@ const BlogLayout = ({ children }:Prop):React.ReactElement=>{
   return (
     <div>
       <Nav/>
-      <BlogNav/>
+      
 
       {children} 
 

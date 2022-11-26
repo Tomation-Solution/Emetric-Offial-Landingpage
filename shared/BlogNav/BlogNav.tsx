@@ -4,38 +4,48 @@ import SearchInput from '../SearchInput/SearchInput'
 import { BlogNavCategorieslink, BlogNavContainer, Categorieslink } from './BlogNav.style'
 
 
+type Prop ={
+  setLook_up?:(value:any)=>void;
+}
 
+export const BlogNav= ({ setLook_up }:Prop):React.ReactElement=>{
 
-export const BlogNav= ():React.ReactElement=>{
+  const handleLook = (value:string)=>{
 
+    if(setLook_up){
+      setLook_up(value)
+    }
+  }
 
-
-  return (
+  return (  
     <BlogNavContainer>
 
       <BlogNavCategorieslink>
-        <Categorieslink>
-          All Post
+        <Categorieslink onClick={(e)=>handleLook('?categories__names=Email Marketing')}>
+        Email Marketing
         </Categorieslink>
         <Categorieslink>
-          Marketing
-        </Categorieslink>
-
-        <Categorieslink>
-          Sales
-        </Categorieslink>
-        <Categorieslink>
-          Services
+        Performance Management
         </Categorieslink>
 
         <Categorieslink>
-          Website
+        KPI Analytics
+        </Categorieslink>
+        <Categorieslink>
+        KPI Analytics
+        </Categorieslink>
+
+        <Categorieslink>
+        Payroll_Management
+        </Categorieslink>
+        <Categorieslink>
+        Leave Management
         </Categorieslink>
        
       </BlogNavCategorieslink>
       <br />
 
-      <SearchInput/>
+      {/* <SearchInput/> */}
     </BlogNavContainer>
   )
 }
