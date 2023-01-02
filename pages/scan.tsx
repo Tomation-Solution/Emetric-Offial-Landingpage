@@ -15,7 +15,7 @@ const Scan:NextPage =()=>{
         <QRCode
         // size={256}
           style={{ height: 'auto', maxWidth: '100%', width: '100%' }}
-          value={'https://www.emetricsuite.com/download'}
+          value={'https://drive.google.com/file/d/1n8kiXsLucsueGyXCO6lvKjZFNMsISi5h/view'}
           viewBox={'0 0 256 256'}
         />
       </div>
