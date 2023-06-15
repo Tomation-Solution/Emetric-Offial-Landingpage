@@ -230,7 +230,7 @@ const Nav = ():React.ReactElement=>{
 
 
           <NavBtnContainer>
-            <li><a href="https://www.emetricsuiteapp.tech/" target={'_blank'} rel="noreferrer" color='#14A7E5'>Sign In</a></li>
+            <li><a href="https://app.emetricsuite.com/" target={'_blank'} rel="noreferrer" color='#14A7E5'>Sign In</a></li>
            
             <Button onClick={handleDemo}>Request Demo</Button>
           </NavBtnContainer>
