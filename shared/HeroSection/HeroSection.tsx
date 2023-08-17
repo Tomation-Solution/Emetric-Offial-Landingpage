@@ -11,7 +11,7 @@ import { demo_link, handleDemo } from '../../utils/extraFunction'
 import {useEffect, useState} from 'react'
 /* eslint-disable */
 // @ts-ignore
-import Zoom  from 'react-reveal/Zoom';
+// import Zoom  from 'react-reveal/Zoom';
 const HeroSection = ():React.ReactElement=>{
   const [count ,setCount]= useState(0 )
   const route = useRouter()
@@ -43,12 +43,12 @@ const HeroSection = ():React.ReactElement=>{
       <HeroSectionImageContainer>
       
 
-<Zoom   when={count%2==0?true:false}>
+{/* <Zoom   when={count%2==0?true:false}> */}
 <img className='hero_main_img' src={hero_image1.src} alt="" style={{'display':count%2==0?'block':'none'}} />
-</Zoom >
-  <Zoom  when={count%2!=0?true:false} >
+{/* </Zoom > */}
+  {/* <Zoom  when={count%2!=0?true:false} > */}
   <img className='hero_main_img' src={hero_image2.src} alt="" style={{'display':count%2!=0?'block':'none'}}/>
-</Zoom >
+{/* </Zoom > */}
         <div className='img_1 container-img' >
           <img  src={time_svg.src} alt="" />
         </div>

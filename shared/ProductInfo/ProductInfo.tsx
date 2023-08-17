@@ -4,7 +4,7 @@ import rounded_transparent from '../../assets/rounded-transparent.png'
 import { handleDemo } from '../../utils/extraFunction';
 // eslint-disable-next-line @typescript-eslint/ban-ts-comment
 // @ts-ignore
-import Bounce from 'react-reveal/Bounce';
+// import Bounce from 'react-reveal/Bounce';
 
 type Prop ={
   heading:string;
@@ -39,16 +39,24 @@ const ProductInfo = ({heading,body,image,variant='var1',removeColor=false}:Prop)
     <>
       {
         variant=='var1'?
-          <Bounce right>
+          <div>
+
             {
               template
             }
-          </Bounce>:
-          <Bounce left>
+          </div>
+
+          :
+          <div>
+
+            {/* // <Bounce left> */}
+
             {
               template
             }
-          </Bounce>
+            {/* // </Bounce> */}
+          </div>
+
       }
     </>
     
