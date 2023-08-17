@@ -21,11 +21,11 @@ export default class MyDocument extends Document {
             {initialProps.styles}
             {sheet.getStyleElement()}
 
-                    <script
-      // strategy="lazyOnload"
-      src={`https://embed.tawk.to/${process.env.NEXT_PUBLIC_PROPERTY_ID}/${process.env.NEXT_PUBLIC_WIDTH_ID}`}
-    async 
-    />
+            <script
+              // strategy="lazyOnload"
+              src={`https://embed.tawk.to/${process.env.NEXT_PUBLIC_PROPERTY_ID}/${process.env.NEXT_PUBLIC_WIDTH_ID}`}
+              async 
+            />
           </>
         ),
       }
