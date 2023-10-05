@@ -10,31 +10,77 @@ import { useRouter } from 'next/router';
 import down from '../../assets/down.png'
 import up from '../../assets/up.png'
 import { handleDemo } from '../../utils/extraFunction'
-const about = [
+
+import NavPopOverWithForm from '../NavPopOvers/NavPopOverWithForm'
+import LoginButtonPopOver from '../LoginButtonPopOver/LoginButtonPopOver'
+
+const Services = [
   {
-    title:'About Us',
-    url:'/about',
+    title:'Performance Management',
+    url:'https://workplacestars.com/services/performance-mangement',
     content:`
-    Be on top of your game by relying on our automated HR tasks management system designed to suit your operational needs.
+  Our performance management system development approach provides for adoptions of various methodologies such as balanced scorecard, OKR, etc. 
     `
   },
   {
-    title:'Our Team',
-    url:'/our_team',
+    title:'Process Improvement and Automation',
+    url:'https://workplacestars.com/services/process-improvement-and-automation',
+    content:`
+    Engaging us for our Business Process Improvement and Automation solution can always be seen as a step in preparing your organization for the next level within a dynamic business environment.
+    `
+  },
+  {
+    title:'Corporate Strategy',
+    url:'https://workplacestars.com/services/corporate-strategy',
+    content:`
+    Our approach to the development of corporate strategy at is designed to ensure that organizations produce better plans for how they can effectively respond to the new and emerging future. 
+    `
+  },
+  {
+    title:'International Market Entry',
+    url:'https://workplacestars.com/our-services',
+    content:`
+    Feel free to enlist the support of our experts, and we'll supply you with all the resources necessary.
+    `
+  }
+]
+
+const freePulse = [
+  {
+    title:'Org 360',
+    url:'https://raredolls.tk/review/',
+    content:`
+    Employee Engagement Management Software
+    `
+  },
+  {
+    title:'Emetrics',
+    url:'https://workplacestars.com/free-pulse/emetrics',
+    content:`
+    Performance Mangement Software 
+    `
+  },
+]
+
+const about = [
+ 
+  {
+    title:'Our Team ',
+    url:'https://workplacestars.com/about-team',
     content:`
     Make a switch from running through several spreadsheets in a bid to prepare your payroll.
     `
   },
   {
-    title:'Our Clients',
-    url:'/our_clients',
+    title:'Our Clients and Testimonials',
+    url:'https://workplacestars.com/about/client-and-testimony',
     content:`
     Manage task allocation, submission and rating hitch freely.
     `
   },
   {
-    title:'Mission & Clients',
-    url:'/mission',
+    title:'Our Value Proposition, Our Mission & Vision',
+    url:'https://workplacestars.com/about/values-mission-vision',
     content:`
     Enjoy effortless management of leave planning and administration with a few clicks.
     `
@@ -44,100 +90,52 @@ const about = [
 
 const Solutions = [
   {
-    title:'Appraisal Data Generation Framework',
-    url:'',
+    title:'ORG 360',
+    url:'https://raredolls.tk/',
     content:`
-    designed to ensure that organizations produce better plans for how they might effectively respond to the new and emerging future....more
+    Employee Engagement Management Software
     `
   },
   {
-    title:'Key Performance Indicators Analytics',
-    url:'/solutions/3',
+    title:'E-metric Suite',
+    url:'https://emetric.workplacestars.com',
     content:`
-    Extraction of result based KPIs and the other parameters especially for the none sales related job functions (backend) could become an herculean task if the ri...more
+    Performance Mangement Software 
     `
   },
   {
-    title:'Corporate Strategy Development',
-    url:'/solutions/2',
+    title:'Sequential Jobs',
+    url:'https://sequentialjobs.workplacestars.com',
     content:`
-    Designed to ensure that organizations produce better plans for how they might effectively respond to the new and emerging future.,,,more
-    `
-  },
-  {
-    title:'Process Documentation',
-    url:'/solutions/4',
-    content:`
-    identify the current state of a process to know how you can improve it..more
+    Smart Recruitment
     `,
   },
+  
+]
+
+
+const LoginMobile = [
   {
-    title:'Performance Management',
-    url:'/solutions/5',
-    content:`
-    while sustaining performance, productivity, and the motivation of employees. In recent years, it has become obvious that traditional performance management is...more
-    `,
+    title:'Login to Org360',
+    url:'https://raredolls.tk/login.php/',
   },
   {
-    title:'Performance Management Software',
-    url:'/solutions/6',
-    content:`
-    E-Metric Suite Software is designed to provide for the need of organizations globally to monitor and manage performance across all tiers as daily operational a...more
-    `,
+    title:'Login to E-metric Suite',
+    url:'https://app.emetricsuite.com/',
+  },
+  {
+    title:'Login to Sequential Jobs',
+    url:'https://app.sequentialjobs.com/login',
   },
 ]
 
-const products = [
-  {
-    title:'HR Administration',
-    url:'/products/4',
-    content:`
-    Be on top of your game by relying on our automated HR tasks management system designed to suit your operational needs.
-    `
-  },
-  {
-    title:'Performance Management',
-    url:'/products/3',
-    content:`
-    Make a switch from running through several spreadsheets in a bid to prepare your payroll.
-    `
-  },
-  {
-    title:'Strategy Implimentation',
-    url:'/products/1',
-    content:`
-    Manage task allocation, submission and rating hitch freely.
-    `
-  },
-  {
-    title:'Appraisal Data Generation',
-    url:'/products/2',
-    content:`
-    Enjoy effortless management of leave planning and administration with a few clicks.
-    `
-  },
-  {
-    title:'Task Managment',
-    url:'/products/7',
-    content:`
-    View employee calendars easily for time analysis and utilization.
-    `
-  },
-  {
-    title:'Payroll Administration',
-    url:'/products/6',
-    content:`
-    Enjoy effortless management of leave planning and administration with a few clicks.
-    `
-  },
-  {
-    title:'Time Sheet',
-    url:'/products/5',
-    content:`
-    View employee calendars easily for time analysis and utilization.
-    `
-  },
-]
+// const RequestDemoMobile = [
+//   {
+//     title:'ORG 360',
+//     url:'https://workplacestars.com/request-demo',
+//   },
+// ]
+
 const Nav = ():React.ReactElement=>{
   const router = useRouter();
   const[showMobileNav,setShowMobileNav]= useState(false)
@@ -179,15 +177,16 @@ const Nav = ():React.ReactElement=>{
           <NavLinksContainer>
             <li><a  
               href="#"
-              id='product'
+              id='services'
               aria-expanded={dropdown ? 'true' : 'false'}
-              onClick={(e)=>handleDropDown(e,'product')} 
-              className={dropdown=='product' ? 'active' : ''} 
-            >Products  <img src={dropdown=='product'?up.src:down.src} alt="" /></a>
+              onClick={(e)=>handleDropDown(e,'services')} 
+              className={dropdown=='services' ? 'active' : ''} 
+            >Services  <img src={dropdown=='services'?up.src:down.src} alt="" /></a>
             
-            <NavDropDown submenus={products} dropdown={dropdown=='product'} />
+            <NavDropDown submenus={Services} dropdown={dropdown=='services'} />
 
             </li>
+
             <li><a href="#"
               id='solutions'
               aria-expanded={dropdown ? 'true' : 'false'}
@@ -196,10 +195,14 @@ const Nav = ():React.ReactElement=>{
             >Solutions <img src={dropdown=='solutions'?up.src:down.src} alt="" /></a>
             <NavDropDown submenus={Solutions} dropdown={dropdown=='solutions'} />
             </li>
-            <li><a 
+
+            {/* Our Partners */}
+            {/* <li><a 
               href="/parthers"
               className={router.pathname == '/parthers' ? 'active' : ''} 
-            >Our Partners </a></li>
+            >Our Partners </a>
+            </li> */}
+            {/* about us */}
             <li>
               <a href="#"
                 id='about_us'
@@ -211,29 +214,97 @@ const Nav = ():React.ReactElement=>{
               </a>
               <NavDropDown submenus={about} dropdown={dropdown=='about_us'} />
             </li>
+            <li>
+              <a href="#"
+                id='free_pulse'
+                aria-expanded={dropdown ? 'true' : 'false'}
+                onClick={e=>handleDropDown(e,'free_pulse')}
+                className={dropdown=='free_pulse' ? 'active' : ''} 
+              >Free Pulse
+                <img src={dropdown=='free_pulse'?up.src:down.src} alt="" />
+              </a>
+              <NavDropDown submenus={freePulse} dropdown={dropdown=='free_pulse'} />
+            </li>
+
+          
+
+            <li>
+              <a href="#"
+                id='become_a_provider'
+                aria-expanded={dropdown ? 'true' : 'false'}
+                onClick={e=>handleDropDown(e,'become_a_provider')}
+                className={dropdown=='become_a_provider' ? 'active' : ''} 
+              >Become a Provider
+                <img src={dropdown=='become_a_provider'?up.src:down.src} alt="" />
+              </a>
+              <NavPopOverWithForm dropdown={dropdown=='become_a_provider'} />
+            </li>
+
             <li><a 
-              className={router.pathname == '/blog' ? 'active' : ''} 
+              className={router.pathname == 'https://sequentialjobs.workplacestars.com/blog' ? 'active' : ''} 
               onClick={e=>{
                 e.preventDefault()
                 handleRoute('/blog')
-              }}
-            >Blog</a></li>
+              }} >Research</a></li>
+              
+              {showMobileNav && (
+                <>
+                
+                <li><a href="#"
+              id='loginMobile'
+              aria-expanded={dropdown ? 'true' : 'false'}
+              onClick={(e)=>handleDropDown(e,'loginMobile')} 
+              className={dropdown=='loginMobile' ? 'active' : ''} 
+            >Login<img src={dropdown=='loginMobile'?up.src:down.src} alt="" /></a>
+            <NavDropDown submenus={LoginMobile} dropdown={dropdown=='loginMobile'} />
+            </li>
 
-            <li><a 
-              className={router.pathname == '/contact_page' ? 'active' : ''} 
-              onClick={e=>{
-                e.preventDefault()
-                handleRoute('/contact_page')
-              }}
-            >contact</a></li>
+                </>
+              )}
+
+            
+
+            
           </NavLinksContainer>
 
 
+        {/* show this login and request demo buttons for large screens */}
+            {!showMobileNav && (
           <NavBtnContainer>
-            <li><a href="https://app.emetricsuite.com/" target={'_blank'} rel="noreferrer" color='#14A7E5'>Sign In</a></li>
+
+            <div>
+              <a href="#"
+                id='request_demo'
+                aria-expanded={dropdown ? 'true' : 'false'}
+                onClick={e=>handleDropDown(e,'request_demo')}
+                className={'request-demo-button'} 
+                // className={dropdown=='request_demo' ? 'active' : ''} 
+              >Request Demo
+                {/* <img src={dropdown=='request_demo'?up.src:down.src} alt="" /> */}
+              </a>
+              <NavPopOverWithForm dropdown={dropdown=='request_demo'} />
+            </div>
+            <div>
+              <a href="#"
+                id='login'
+                aria-expanded={dropdown ? 'true' : 'false'}
+                onClick={e=>handleDropDown(e,'login')}
+                className={'request-demo-button'} 
+                // className={dropdown=='login' ? 'active' : ''} 
+              >Login
+                {/* <img src={dropdown=='login'?up.src:down.src} alt="" /> */}
+              </a>
+             
+            <LoginButtonPopOver dropdown={dropdown=='login'} />
+            </div>
+            
+
+            
+            {/* <li><a href="https://app.emetricsuite.com/" target={'_blank'} rel="noreferrer" color='#14A7E5'>Sign In</a></li> */}
+            
            
-            <Button onClick={handleDemo}>Request Demo</Button>
-          </NavBtnContainer>
+          </NavBtnContainer>)
+           }
         </NavSecondPart>
 
       </NavContainer>

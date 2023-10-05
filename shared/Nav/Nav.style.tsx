@@ -7,13 +7,13 @@ export const MainNav =styled.nav`
     z-index: 10;
 `
 export const NavContainer=styled.div`
-/* border: 1px solid red; */
+// background-color:red;
 padding: .8rem 1rem;
 display: flex;
 align-items: center;
 justify-content: space-between;
 position: relative;
-max-width: 1200px;
+max-width: 1400px; /* cahnges this */
 margin: 0 auto;
 svg{
     font-weight: 100;
@@ -21,7 +21,8 @@ svg{
     cursor: pointer;
 }
 
-@media screen and (min-width: 800px){
+@media screen and (min-width: 1200px){
+    
     padding: .8rem 3rem;
     svg{
         display: none;
@@ -58,7 +59,7 @@ svg{
     margin-left: auto;
 }
 
-@media screen and (min-width: 800px) {
+@media screen and (min-width: 1200px) {
     /* border:1px solid red; */
     padding:0;
     transform: translateX(0);
@@ -99,31 +100,36 @@ export const NavLinksContainer=styled.ul`
         &.active{
             color: ${({theme})=>theme.main_color} !important;
         }
+        
     }
 
-    @media screen and (min-width: 800px){
+
+    @media screen and (min-width: 1200px){
         display: flex;
         justify-content: space-between;
         width: 60%;
+       
     }
 
     @media screen and (min-width: 1200px){
-        width: 500px;
+        width: 640px;
+       
     }
 
 `
 export const NavBtnContainer=styled.div`
+
     margin-top: 1rem;
     color: ${({theme})=>theme.text.lightText};
 
     li{
         padding: 2rem 0;
     }
-    @media screen and (min-width: 800px){
+    @media screen and (min-width: 1200px){
         display: flex;
         justify-content: space-between;
         align-items: center;
-        /* border: 1px solid red; */
+       
         width: 35%;
     margin-top: unset;
 
@@ -131,9 +137,9 @@ export const NavBtnContainer=styled.div`
             padding: 0 .2rem;
             width: 30%;
         }
-        button{
-            width: 65%;
-        }
+        // button{
+        //     width: 65%;
+        // }
     }
 
     @media screen and (min-width: 1200px){

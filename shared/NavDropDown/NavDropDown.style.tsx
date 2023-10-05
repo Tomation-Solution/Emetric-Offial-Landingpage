@@ -26,14 +26,14 @@ export const DropdownContainer = styled.ul`
     }
 
 
-    @media screen and (min-width: 1000px) {
+    @media screen and (min-width: 1200px) {
 
       li{
         width: 400px;
       }
       &.show{
         position: fixed;
-          width: 1000px;
+          width: 1200px;
           transform: translateX(-100px) translateY(30px);
           padding: 2rem;
 
