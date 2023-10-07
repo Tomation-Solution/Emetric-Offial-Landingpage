@@ -5,11 +5,13 @@ import image from '../../assets/teamImg.jpg'
 export const NavPopOverContainer = styled.ul`
     
 background-color: white;
+
 position: absolute;
 // padding: 10px 10px;
 border-radius: 10px;
 z-index: 90;
 top: 30px;
+right:-120px;
 // left: 300px;
 // right:200px;
 box-shadow: 0px 4px 4px rgba(20, 166, 229, 0.11);
