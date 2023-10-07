@@ -227,6 +227,9 @@ const Nav = ():React.ReactElement=>{
             </li>
 
           
+            {showMobileNav ? ( 
+               <></>
+            ):(
 
             <li>
               <a href="#"
@@ -239,6 +242,7 @@ const Nav = ():React.ReactElement=>{
               </a>
               <NavPopOverWithForm dropdown={dropdown=='become_a_provider'} />
             </li>
+            )}
 
             <li><a 
               className={router.pathname == 'https://sequentialjobs.workplacestars.com/blog' ? 'active' : ''} 
