@@ -1,7 +1,7 @@
 import Button from '../Button/Button'
 import { NavBtnContainer, NavContainer, NavSecondPart,NavLinksContainer, NavLogoContainer, MainNav } from './Nav.style'
 import {  FaBars } from 'react-icons/fa'
-import EmetricLogo  from '../../assets/logo.svg'
+import EmetricLogo  from '../../assets/logo.png'
 import {IoMdCloseCircle} from 'react-icons/io'
 import { useEffect, useState } from 'react'
 import NavDropDown from '../NavDropDown/NavDropDown'
